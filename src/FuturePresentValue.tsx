@@ -8,12 +8,14 @@ import { useNavigate } from 'react-router-dom';
 
 function FuturePresentValue() {
   
-  
+  //state for future value 
   const [futureValue, setFutureValue] = useState<number>(0);
   const [presentValue, setPresentValue] = useState<number>(0);
   const [numPeriods, setnumPeriods] = useState<number>(0);
   const [interestRate, setinterestRate] = useState<number>(0);
-  
+
+
+ 
 
   function calculateFutureValue(): void{
     setFutureValue(presentValue*(1+(interestRate/100))**numPeriods);
@@ -41,7 +43,7 @@ function FuturePresentValue() {
     <div>
 
         <div className = "homepage-button">
-
+        
         <button onClick = {() => navigate("/")}>
           Homepage  
         </button>
